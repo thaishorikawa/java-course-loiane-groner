@@ -17,6 +17,4 @@ public class Main {
         }
     }
 
-    public static class lesson10 {
-    }
 }
