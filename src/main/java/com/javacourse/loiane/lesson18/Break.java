@@ -2,7 +2,7 @@ package com.javacourse.loiane.lesson18;
 
 import java.util.Scanner;
 
-public class BreakAndContinue {
+public class Break {
 
     public static void main(String[] args) {
 
