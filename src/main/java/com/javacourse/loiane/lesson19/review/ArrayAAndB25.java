@@ -2,25 +2,20 @@ package com.javacourse.loiane.lesson19.review;
 
 import java.util.Scanner;
 
-public class ArrayAPalindrome {
+public class ArrayAAndB25 {
 
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
 
         int[] arrayA = new int[10];
+        int[] arrayB = new int[arrayA.length];
 
         for (int i = 0; i < arrayA.length; i++) {
             System.out.println("Enter the number of position " + i);
             arrayA[i] = scan.nextInt();
-        }
 
-        boolean palindrome = true;
-        for (int i = 0; i < (arrayA.length/2); i++) {
-            if (arrayA[i] != arrayA[arrayA.length - 1 - i]) {
-                palindrome = false;
-                break;
-            }
+            arrayB[i] = (arrayA[i] % 2 == 0) ? 1 : 0;
         }
 
         System.out.print("Array A = ");
@@ -29,11 +24,10 @@ public class ArrayAPalindrome {
         }
         System.out.println();
 
-        if (palindrome) {
-            System.out.println("Palindrome!");
-        } else {
-            System.out.println("It's not palindrome!");
+        System.out.print("Array B = ");
+        for (int i = 0; i < arrayB.length; i++) {
+            System.out.print(arrayB[i] + " ");
         }
-
+        System.out.println();
     }
 }
