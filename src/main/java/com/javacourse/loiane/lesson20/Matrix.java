@@ -4,7 +4,7 @@ public class Matrix {
 
     public static void main(String[] args) {
 
-        double[][] studentsGrades = new double[30][4];
+        double[][] studentsGrades = new double[3][4];
 
         studentsGrades[0][0] = 10;
         studentsGrades[0][1] = 7;
@@ -20,5 +20,37 @@ public class Matrix {
         studentsGrades[2][1] = 9;
         studentsGrades[2][2] = 10;
         studentsGrades[2][3] = 7.5;
+
+        for (int i = 0; i < studentsGrades.length; i++) {
+            for (int j = 0; j < studentsGrades[i].length; j++) {
+                System.out.print(studentsGrades[i][j] + " - ");
+            }
+            System.out.println();
+        }
+
+        studentsGrades[1][3] = 8;
+
+        System.out.println();
+
+        for (int i = 0; i < studentsGrades.length; i++) {
+            for (int j = 0; j < studentsGrades[i].length; j++) {
+                System.out.print(studentsGrades[i][j] + " - ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("Media of the students: ");
+
+        double sum;
+        for (int i = 0; i < studentsGrades.length; i++) {
+
+            sum = 0;
+            for (int j = 0; j < studentsGrades[i].length; j++) {
+                sum += studentsGrades[i][j];
+            }
+            System.out.println("Media of student " + (i + 1) + " is = " + (sum / 4));
+        }
+
+
     }
 }
