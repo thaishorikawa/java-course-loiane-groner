@@ -37,7 +37,7 @@ public class LargestAndSmallestNumberMatrix {
         }
 
         System.out.println("The largest number of row 5 is: " + largestR5);
-        System.out.println("Tha smallest number of row 5 is: " +smallestR5);
+        System.out.println("Tha smallest number of row 5 is: " + smallestR5);
 
         int largestC7 = 0;
         int smallestC7 = 101;
@@ -53,6 +53,6 @@ public class LargestAndSmallestNumberMatrix {
         }
 
         System.out.println("The largest number of column 7 is: " + largestC7);
-        System.out.println("Tha smallest number of column 7 is: " +smallestC7);
+        System.out.println("Tha smallest number of column 7 is: " + smallestC7);
     }
 }
