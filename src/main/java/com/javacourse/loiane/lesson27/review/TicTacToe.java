@@ -6,7 +6,8 @@ public class TicTacToe {
     int move = 1;
 
     boolean validateMove(int row, int column, char sign) {
-        if (ticTacToeGame[row][column] == sign || ticTacToeGame[row][column] == 'O') {
+        if (ticTacToeGame[row][column] == 'X' || ticTacToeGame[row][column] == 'O') {
+            System.out.println("You need to choose an empty space.");
             return false;
         } else {
             ticTacToeGame[row][column] = sign;
