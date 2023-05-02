@@ -52,7 +52,7 @@ public class TicTacToe {
 
             row--;
             column--;
-            if (gameTicTacToe[row][column] == 'X' || gameTicTacToe[row][column] == 'O') {
+            if (gameTicTacToe[row][column] == sign || gameTicTacToe[row][column] == 'O') {
                 System.out.println("This position is not available, try again.");
             } else {
                 gameTicTacToe[row][column] = sign;
@@ -68,14 +68,14 @@ public class TicTacToe {
             }
 
             //check if there's a winner
-            if ((gameTicTacToe[0][0] == 'X' && gameTicTacToe[0][1] == 'X' && gameTicTacToe[0][2] == 'X') ||     //row 1
-                    (gameTicTacToe[1][0] == 'X' && gameTicTacToe[1][1] == 'X' && gameTicTacToe[1][2] == 'X') || //row 2
-                    (gameTicTacToe[2][0] == 'X' && gameTicTacToe[2][1] == 'X' && gameTicTacToe[2][2] == 'X') || //row 3
-                    (gameTicTacToe[0][0] == 'X' && gameTicTacToe[1][0] == 'X' && gameTicTacToe[2][0] == 'X') ||
-                    (gameTicTacToe[0][1] == 'X' && gameTicTacToe[1][1] == 'X' && gameTicTacToe[2][1] == 'X') ||
-                    (gameTicTacToe[0][2] == 'X' && gameTicTacToe[1][2] == 'X' && gameTicTacToe[2][2] == 'X') ||
-                    (gameTicTacToe[0][0] == 'X' && gameTicTacToe[1][1] == 'X' && gameTicTacToe[2][2] == 'X') ||
-                    (gameTicTacToe[2][0] == 'X' && gameTicTacToe[1][1] == 'X' && gameTicTacToe[0][2] == 'X')) {
+            if ((gameTicTacToe[0][0] == sign && gameTicTacToe[0][1] == sign && gameTicTacToe[0][2] == sign) ||     //row 1
+                    (gameTicTacToe[1][0] == sign && gameTicTacToe[1][1] == sign && gameTicTacToe[1][2] == sign) || //row 2
+                    (gameTicTacToe[2][0] == sign && gameTicTacToe[2][1] == sign && gameTicTacToe[2][2] == sign) || //row 3
+                    (gameTicTacToe[0][0] == sign && gameTicTacToe[1][0] == sign && gameTicTacToe[2][0] == sign) ||
+                    (gameTicTacToe[0][1] == sign && gameTicTacToe[1][1] == sign && gameTicTacToe[2][1] == sign) ||
+                    (gameTicTacToe[0][2] == sign && gameTicTacToe[1][2] == sign && gameTicTacToe[2][2] == sign) ||
+                    (gameTicTacToe[0][0] == sign && gameTicTacToe[1][1] == sign && gameTicTacToe[2][2] == sign) ||
+                    (gameTicTacToe[2][0] == sign && gameTicTacToe[1][1] == sign && gameTicTacToe[0][2] == sign)) {
                 won = true;
                 System.out.println("Congratulations, Player 1 has won!");
             } else if ((gameTicTacToe[0][0] == 'O' && gameTicTacToe[0][1] == 'O' && gameTicTacToe[0][2] == 'O') ||     //row 1
